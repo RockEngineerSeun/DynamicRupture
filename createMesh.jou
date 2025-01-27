@@ -222,3 +222,4 @@ cubit.cmd('group "NucleationNodes" add node 25769 25787 25793 25794 25795 25796 
 
 cubit.cmd('disp all')
 
+#######To create a different mesh. Follow the analogy herein. Using the webcut tool in Coreform Cubit generates a locked fault-plane (December, 2024).
