@@ -1,0 +1,13 @@
+How to install Specfem3d on a desktop computer for Windows users.
+* It is recommended to use Linux OS ¨C install Linux Ubuntu on Windows. See, https://learn.microsoft.com/en-us/windows/wsl/install
+* Install Parallel programing with MPI (openmpi) and C++ and Fortran compliers, see
+https://pdc-support.github.io/introduction-to-mpi/setup.html
+* How to install Specfem3d, see 
+https://github.com/SPECFEM/specfem3d/tree/master
+* To use multiple processor core, type:
+¡¡¡¡./configure FC=gfortran CC=gcc MPIFC=mpif90 --with-mpi
+* To use with scotch partitioning type:
+./configure FC=gfortran CC=gcc CXX=mpicxx MPIFC=mpif90 --with-mpi --with-scotch-dir=./scotch/build
+Troubleshoot:
+Error in installation with Scotch requires downloading Scotch separately ¨C into the same root directory folder as Specfem3d ¨C then copy the folders grt, tgt, man, and include, from the Specfem3d inbuilt (version provided with) Scotch to the user-downloaded scotch/build directory. Now, rerun the installation using the scotch partitioning code above.
+
