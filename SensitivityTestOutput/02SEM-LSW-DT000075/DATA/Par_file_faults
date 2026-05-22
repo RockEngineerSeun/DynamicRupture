@@ -1,0 +1,15 @@
+1
+0.00043             ! #tag #eta(damping) FAULT A (for original mesh resolution, use: 0.00051)
+1                       ! 1 = dyn 2=kin
+500                    ! NTOUT : Number of time steps
+500                     ! NTSNAP: time interation of snapshots
+-1e0                    ! V_HEALING (-1 : Healing off)
+1e-3                    ! V_RUPT
+
+&RUPTURE_SWITCHES RATE_AND_STATE=.false.,TPV16=.false.,TPV10X=.false.,RSF_HETE=.false./
+
+&BEGIN_FAULT /
+&STRESS_TENSOR Sigma=0e0,0e0,0e0,0e0,0e0,0e0/
+&INIT_STRESS S1=70.0e6,S2=0.0e0,S3=120.0e6,n1=0,n2=0,n3=0 /
+&SWF mus=0.677e0,mud=0.525e0,dc=0.4e0,nmus=0,nmud=0,ndc=0 /
+&DIST2D shapeval='circle-exp', val = 81.6e6, xc = 0.e3, yc =-0.1e0, zc=  1.5e2, r =5.0e1 /
